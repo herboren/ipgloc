@@ -6,10 +6,12 @@ def ModelResponseToJSON(response):
     return json.loads(response.replace("'",'"'))
 
 with geoip2.database.Reader(f'{os.getcwd()}\db\GeoLite2-City.mmdb') as reader:
-    response = ModelResponseToJSON(reader.city('')) 
-    latitude = response['location']['latitude']
-    longitude = response['location']['longitude']
-    print(f'Latitude: {latitude}\nLongitude: {longitude}')
+    response = ModelResponseToJSON(reader.city('8.8.8.8')) 
+    print(response)
+    
+    #latitude = response['location']['latitude']
+    #longitude = response['location']['longitude']
+    #print(f'Latitude: {latitude}\nLongitude: {longitude}')
     
 
 
