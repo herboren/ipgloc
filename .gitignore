@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-ipgloc.py
-ru.csv
+ipgloc
+ru
 misc
 db
