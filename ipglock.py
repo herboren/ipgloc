@@ -2,7 +2,7 @@ import geoip2.database, json, os, re, csv
 from ipaddress import ip_address, IPv4Address
 
 uscenter = '207.250.97.159'
-csv_header = ['source', 'city', 'country', 'src_latitude', 'src_longitude','tar_latitude','tar_longitude']
+csv_header = ['Date and Time','source', 'city', 'country', 'src_latitude', 'src_longitude','tar_latitude','tar_longitude']
 # 38.2507,-85.7472
 # Louisville, KY
 
@@ -18,10 +18,7 @@ with geoip2.database.Reader(f'{os.getcwd()}\db\GeoLite2-City.mmdb') as reader:
             for row in rows:   
                 try:            
                     response = reader.city(row[2])
-                    if type(response.city.name) == "<class 'NoneType'>":
-                        data = [row[2],'None',response.location.latitude,response.location.longitude,'38.2507','-85.7472']
-                    else:
-                        data = [row[2],response.city.name,response.location.latitude,response.location.longitude,'38.2507','-85.7472']
+                    data = [row[0],row[2],response.city.name,response.country.name,response.location.latitude,response.location.longitude,'38.2507','-85.7472']
                     
                     #print(data)
                     csv_write.writerow(data)
