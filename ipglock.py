@@ -19,10 +19,7 @@ with geoip2.database.Reader(f'{os.getcwd()}\db\GeoLite2-City.mmdb') as reader:
                 try:            
                     response = reader.city(row[2])
                     data = [row[0],row[2],response.city.name,response.country.name,response.location.latitude,response.location.longitude,'38.2507','-85.7472']
-                    
                     #print(data)
                     csv_write.writerow(data)
-                    # print(f"{row[2]},{response.city.name},{response.location.latitude},{response.location.longitude}")
-                    # print(f"IP Address: {row[0]}\n\nCity: {response.city.name}\nLat/Lon: {response.location.latitude}, {response.location.longitude}")
                 except Exception as ex:
                     print(ex)
