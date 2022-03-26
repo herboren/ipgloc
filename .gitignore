@@ -128,3 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 db/IP2PROXY-LITE-PX5.BIN
+dbs/GeoLite2-ASN.mmdb
+dbs/GeoLite2-City.mmdb
+dbs/GeoLite2-Country.mmdb
+dbs/IP2PROXY-LITE-PX5.BIN
