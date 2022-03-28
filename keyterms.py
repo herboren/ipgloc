@@ -14,18 +14,9 @@ class KeyTerms:
         "SES":"Search Engine Spider",
         "RSV":"Reserved"
         }
-
-    proxy_csv_header = [
-        'IP','Is Proxy','Proxy Type','Country Name','Region Name','City Name','ISP',
-        'Domain','Usage Type', 'ASN','AS Name','Last Seen','Threat','Provider'
-        ]
-
-    gloc_csv_header = [
-        'Date and Time','source', 'city', 'country', 'src_latitude', 'src_longitude',
-        'tar_latitude','tar_longitude'
-        ]
+        
     report_columns = [
-        'Date_Time','IPv4','Is_Proxy','Proxy','Type','Top_Level','Country',
-        'Region','City','ISP','Domain','Organization','ASN_Name','ASN_#','Threat_Type','Provider',
+        'Date_Time','IPv4','Is_Proxy','Proxy','Type','Threat_Type', 'Country','Region',
+        'City','ISP','Domain','Top_Level','Organization','ASN_Name','ASN#','Provider',
         'IPv4_Latitidue','IPv4_Longitude','Target_Latitude','Target_Longitude'
         ]
