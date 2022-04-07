@@ -49,4 +49,4 @@ def GetIpLocationData(ip):
         except Exception as ex:
             print(ex)
 
-GetIpData(threat_data)
+GetIpData(threat_data_csv)
